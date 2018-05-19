@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/favicon.ico">
+      <style>
+          .align-center{
+margin:0 auto; /* 居中 这个是必须的，，其它的属性非必须 */
+width:500px; /* 给个宽度 顶到浏览器的两边就看不出居中效果了 */
+text-align:center; /* 文字等内容居中 */
+}
+      </style>
+
+    <title>Product example for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/product.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="site-header sticky-top py-1">
+      <div class="container d-flex flex-column flex-md-row justify-content-between">
+        <a class="py-2" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mx-auto"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+        </a>
+        <a class="py-2 d-none d-md-inline-block" href="#">区块链产品防伪</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">_</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">_</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">_</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">_</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">_</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">_</a>
+      </div>
+    </nav>
+
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+      <div class="col-md-5 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 font-weight-normal">基于星云链的产品防伪技术</h1>
+        <p class="lead font-weight-normal">为产品生成独一无二的防伪码，并上传至区块链中，不可篡改，扫描防伪码，根据区块链时间记录，验明真伪</p>
+        <a class="btn btn-outline-secondary" id="save" href="#noo">防伪码生成上链</a>
+          <div class="container" style="margin-top: 20px">
+          <p class="lead font-weight-normal">防伪设计：一旦产品售出，则向区块链发送交易，记录产品售出时间。用户扫码验伪，若用户扫码时间与产品售出时间差距过大，则为伪品</p>
+      </div>
+          </div>
+      <div class="product-device box-shadow d-none d-md-block"></div>
+      <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+    </div>
+
+    <div id="noo" class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+      <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+        <div class="my-3 py-3">
+          <h2 class="display-5">生成防伪码</h2>
+          <p class="lead">输入产品基本信息，点击信息上链，则给您的产品生成防伪码，并记录在区块链上.</p>
+        </div>
+        <div class="bg-light box-shadow mx-auto" style="width: 80%; height: 350px; border-radius: 21px 21px 0 0;">
+
+                        <div class="container">
+
+                          <div class="mb-3">
+              <label class="text-dark"><br/>产品编号</label>
+              <input type="text" class="form-control" id="key" placeholder="1234" required>
+
+            </div>
+
+                        <div class="mb-3">
+              <label class="text-dark">产品名字</label>
+              <input type="text" class="form-control" id="name" placeholder="Washer" required>
+
+            </div>
+
+                        <div class="mb-3">
+              <label class="text-dark">产品描述</label>
+              <input type="text" class="form-control" id="description" placeholder="It is used to wash" required>
+
+            </div>
+                <div class="mb-3">
+                    <button class="btn btn-outline-secondary" id="save2">信息上链并生成防伪条码</button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+      </div>
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">此处为生成的防伪码</h2>
+          <p class="lead">防伪逻辑：伪制人员购买正品后，即使将防伪码也原样刻在商品上，但是其售出时间已经被记录在区块链上，无法篡改。消费者扫描防伪码，可以查询到区块链上记录的该商品售出时间，对比自己确实购买的时间，即可验明真伪</p>
+        </div>
+        <div id="qrcode" class="bg-light box-shadow mx-auto text-center" style="width: 250px; height: 250px; border-radius: 21px 21px 0 0;">
+           <p class="lead" id="tip1"><br/><br/>点击信息上链，您的产品信息将会存储到星云链中，并生成唯一的防伪码</p>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">扫码</h2>
+          <label class="text-dark">商家：一旦商品售出时，扫码，并点击确认售出。</label>
+            <label class="text-dark">消费者：扫码验伪，若为真品，则售出时间即为您买入的时间。</label>
+            <label class="text-dark">防伪码扫描部分机型适配未完成，建议通过上传防伪码方式测试功能</label>
+
+<div class="container text-center">
+            <label class="text-dark" style="margin-right: 20px">上传二维码</label><input id="upload" type="file">
+</div>
+        </div>
+        <div id="showcode" class="bg-white box-shadow mx-auto" style="width: 250px; height: 250px; border-radius: 21px 21px 0 0;"></div>
+      <button id="scan" class="btn btn-outline-secondary" >扫描二维码</button>
+            <button id="sold" class="btn btn-outline-secondary" >确认售出</button>
+          <br/>
+          <label id="tip2" class="text-dark">点击确认售出之后，请刷新页面，重新扫描或上传二维码，可以获取更新之后的产品信息</label>
+      </div>
+
+
+
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 py-3">
+          <h2 class="display-5">防伪验证</h2>
+          <p class="lead">请对比产品售出时间和当前时间，验明产品真伪</p>
+            <label class="text-dark">"未售出"为商家未点击确认售出，测试时请上传二维码后点击确认售出，可再次查询售出时间</label>
+
+
+        </div>
+        <div class="result1 bg-white box-shadow mx-auto" style="width: 80%; height: 400px; border-radius: 21px 21px 0 0;">
+
+                                    <div class="container">
+
+                          <div class="mb-3">
+              <label class="text-dark"><br/>产品编号</label>
+                              <div class="row bg-light box-shadow mx-auto" style="width: 100%; height: 25px; border-radius: 11px 11px 0 0;">
+              <p id="key_out" class="text-mute "></p>
+                                  </div>
+
+            </div>
+
+                        <div class="mb-3">
+              <label class="text-dark">产品名字</label>
+                                      <div class="row bg-light box-shadow mx-auto" style="width: 100%; height: 25px; border-radius: 11px 11px 0 0;">
+              <p id="name_out" class="text-mute "></p>
+                                  </div>
+
+            </div>
+
+                        <div class="mb-3">
+              <label class="text-dark">产品描述</label>
+                                      <div class="row bg-light box-shadow mx-auto" style="width: 100%; height: 25px; border-radius: 11px 11px 0 0;">
+              <p id="description_out" class="text-mute "></p>
+                                  </div>
+
+            </div>
+
+               <div class="mb-3">
+              <label class="text-dark">产品售出时间</label>
+                                      <div class="row bg-light box-shadow mx-auto" style="width: 100%; height: 25px; border-radius: 11px 11px 0 0;">
+              <p id="selltime" class="text-mute "></p>
+                                  </div>
+
+            </div>
+
+                <div class="mb-3">
+              <label class="text-dark">当前时间</label>
+                                      <div class="row bg-light box-shadow mx-auto" style="width: 100%; height: 25px; border-radius: 11px 11px 0 0;">
+              <p id="nowtime" class="text-mute "></p>
+                                  </div>
+
+            </div>
+
+            </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+    <footer class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+          <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Features</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Cool stuff</a></li>
+            <li><a class="text-muted" href="#">Random feature</a></li>
+            <li><a class="text-muted" href="#">Team feature</a></li>
+            <li><a class="text-muted" href="#">Stuff for developers</a></li>
+            <li><a class="text-muted" href="#">Another one</a></li>
+            <li><a class="text-muted" href="#">Last time</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Resource</a></li>
+            <li><a class="text-muted" href="#">Resource name</a></li>
+            <li><a class="text-muted" href="#">Another resource</a></li>
+            <li><a class="text-muted" href="#">Final resource</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Business</a></li>
+            <li><a class="text-muted" href="#">Education</a></li>
+            <li><a class="text-muted" href="#">Government</a></li>
+            <li><a class="text-muted" href="#">Gaming</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>About</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Team</a></li>
+            <li><a class="text-muted" href="#">Locations</a></li>
+            <li><a class="text-muted" href="#">Privacy</a></li>
+            <li><a class="text-muted" href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    	<script type="text/javascript" src="lib3/grid.js"></script>
+	<script type="text/javascript" src="lib3/version.js"></script>
+	<script type="text/javascript" src="lib3/detector.js"></script>
+	<script type="text/javascript" src="lib3/formatinf.js"></script>
+	<script type="text/javascript" src="lib3/errorlevel.js"></script>
+	<script type="text/javascript" src="lib3/bitmat.js"></script>
+	<script type="text/javascript" src="lib3/datablock.js"></script>
+	<script type="text/javascript" src="lib3/bmparser.js"></script>
+	<script type="text/javascript" src="lib3/datamask.js"></script>
+	<script type="text/javascript" src="lib3/rsdecoder.js"></script>
+	<script type="text/javascript" src="lib3/gf256poly.js"></script>
+	<script type="text/javascript" src="lib3/gf256.js"></script>
+	<script type="text/javascript" src="lib3/decoder.js"></script>
+	<script type="text/javascript" src="lib3/qrcode.js"></script>
+	<script type="text/javascript" src="lib3/findpat.js"></script>
+	<script type="text/javascript" src="lib3/alignpat.js"></script>
+	<script type="text/javascript" src="lib3/databr.js"></script>
+	<script type="text/javascript" src="lib3/webcam.min.js"></script>
+
+    <script src="lib2/popper.min.js"></script>
+    <script src="lib2/bootstrap.min.js"></script>
+    <script src="lib2/holder.min.js"></script>
+    <script src=lib/jquery-3.3.1.min.js></script>
+<script src=lib/nebPay.js></script>
+<script src=lib/bootstrap-4.0.0-dist/js/bootstrap.min.js></script>
+<script src=lib/nebulas.js></script>
+<script src=lib/qrcode.min.js></script>
+    <script src="lib2/qrcodereader.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+
+
+
+
+
+            "use strict";
+
+
+    // $("#search_value").attr("disabled",true)
+    // $("#search").attr("disabled",true)
+    // //to check if the extension is installed
+    // //if the extension is installed, var "webExtensionWallet" will be injected in to web page
+    // if(typeof(webExtensionWallet) === "undefined"){
+    //     //alert ("Extension wallet is not installed, please install it first.")
+    //     $("#noExtension").removeClass("hide")
+    // }else{
+    //     $("#search_value").attr("disabled",false)
+    //     $("#search").attr("disabled",false)
+    // }
+
+    var dappAddress = "n1iYoV3s6Ke7ydhaP9gUND8b46NzHMg6C8y";
+
+    //here we use neb.js to call the "get" function to search from the Dictionary
+    var nebulas = require("nebulas"),
+        Account = nebulas.Account,
+        neb = new nebulas.Neb();
+    neb.setRequest(new nebulas.HttpRequest("https://mainnet.nebulas.io"));
+
+    var qrcodeshow = new QRCode(document.getElementById("qrcode"), {
+	width : 250,
+	height : 250
+});
+
+
+    var NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
+    var nebPay = new NebPay();
+    var serialNumber
+
+    $("#save2").click(function() {
+
+$("#showall").text("hellp")
+
+        var to = dappAddress;
+        var value = "0";
+        var callFunction = "save"
+        var callArgs = "[\"" + $("#key").val() + "\",\"" + $("#name").val() + "\",\"" + $("#description").val() + "\"]";
+$("#show_value").text(callArgs)
+        serialNumber = nebPay.call(to, value, callFunction, callArgs, {    //使用nebpay的call接口去调用合约,
+            listener: cbPush        //设置listener, 处理交易返回信息
+        });
+
+        intervalQuery = setInterval(function () {
+            funcIntervalQuery();
+        }, 10000);
+    });
+
+    var intervalQuery
+
+
+    function funcIntervalQuery() {
+        nebPay.queryPayInfo(serialNumber)   //search transaction result from server (result upload to server by app)
+            .then(function (resp) {
+                console.log("tx result: " + resp)   //resp is a JSON string
+                $("#resultall2").text(JSON.stringify(resp))
+
+                var respObject = JSON.parse(resp)
+                console.log(respObject.code)
+                    qrcodeshow.makeCode($("#key").val())
+                    $("#tip1").hide()
+                if(respObject.code === 0 || respObject.data.status === 1){
+
+                alert("该产品信息已经成功存入星云链，请右键保存防伪码")
+                    var strall = JSON.stringify(resp);
+var start=strall.indexOf("from");
+var end = strall.indexOf("to")
+var resuu = strall.substring(start+9,end-5);
+                    console.log(start,end)
+                    console.log(resuu)
+
+                    clearInterval(intervalQuery)
+
+                }
+            })
+            .catch(function (err) {
+                console.log(err);
+            });
+    }
+
+    function cbPush(resp) {
+        console.log("response of push: " + JSON.stringify(resp))
+
+    }
+
+
+    var unique_id=""
+
+
+
+$("#upload").change(function decode(d){
+    var reader=new FileReader();
+    reader.readAsDataURL(d.target.files[0]);
+    reader.onload=function(d){
+       // console.log(d);
+        var base64=d.target.result;
+        document.getElementById("showcode").innerHTML="<img src='"+base64+"'/>";
+
+        qrcode.decode(base64,function(result){
+            console.log(result)
+            alert("扫描成功，请稍后，产品信息即将获取")
+            unique_id = result
+            lookfor(result)
+            $("#showall").text(result)
+        })
+    }
+})
+
+
+
+
+
+
+
+    		var succeed = false;
+		var int = -1;
+
+		var webcamOptions = {
+			width: 320,
+			height: 240,
+			image_format: 'jpeg',
+			jpeg_quality: 90,
+		};
+
+		var attach = function () {
+			Webcam.attach('#showcode');
+			Webcam.on('live', function () {
+				int = setInterval(snap, 500);  // 0.5s
+			});
+		}
+
+		// if you don't need any additional options then use `var webcamOptions = true;`
+
+$("#scan").click(function () {
+		// `enumerateDevices` is a method for getting all available media devices
+		if (typeof navigator.mediaDevices.enumerateDevices === 'undefined') {
+			// if method `enumerateDevices` doesn't support on the device we just run webcam
+			Webcam.set(webcamOptions);
+			attach();
+		} else {
+			navigator.mediaDevices.enumerateDevices()
+				.then(function (devices) {
+					// Get all cameras on the device
+					var cameras = devices.filter(function (device) {
+						return device.kind === 'videoinput';
+					});
+
+					var deviceId = null;
+
+					cameras.forEach(function (camera) {
+						// Search back camera on the device
+						if (camera.label.toLowerCase().search('back') > -1) {
+							deviceId = camera.deviceId;
+						}
+					});
+
+					// If we don't find the back camera we use last camera in the list
+					if (!deviceId && cameras.length) {
+						deviceId = cameras[cameras.length - 1].deviceId;
+					}
+
+					if (deviceId) {
+						// If we have `deviceId` of a camera we run webcam with the following params:
+						webcamOptions.constraints = {
+							deviceId: {
+								exact: deviceId
+							},
+							facingMode: 'environment'
+						}
+					}
+
+					Webcam.set(webcamOptions);
+					attach();
+				})
+				.catch(function (error) {
+					console.log(error);
+				});
+		}
+
+
+    $("#sout").text("hello")
+})
+
+
+
+
+		function snap() {
+			// take snapshot and get image data
+			Webcam.snap(function (data_uri) {
+				qrcode.decode(data_uri, function(a){
+			if (!a.includes('error')) {
+                alert("扫描成功，请稍后，信息即将获取")
+                unique_id=a
+                lookfor(a)
+				clearInterval(int)
+			}
+        })
+			});
+		}
+
+
+
+      
+		
+		
+		
+    function lookfor(sss) {
+        var from = Account.NewAccount().getAddressString();
+
+        var value = "0";
+        var nonce = "0";
+        var gas_price = "1000000";
+        var gas_limit = "2000000";
+        var callFunction = "get";
+        console.log(sss)
+        var callArgs = "[\"" + sss + "\"]"; //in the form of ["args"]
+        $("#show_value").text(callArgs);
+        var contract = {
+            "function": callFunction,
+            "args": callArgs
+        }
+
+        neb.api.call(from,dappAddress,value,nonce,gas_price,gas_limit,contract).then(function (resp) {
+            cbSearch(resp)
+        }).catch(function (err) {
+            //cbSearch(err)
+            alert("error:" + err.message)
+        })
+    }
+		    //return of search,
+    function cbSearch(resp) {
+        var result = resp.result    ////resp is an object, resp.result is a JSON string
+        console.log("Result: " + JSON.stringify(result))
+
+        if (result === 'null'){
+            alert("not found")
+        } else{
+            //if result is not null, then it should be "return value" or "error message"
+            try{
+                result = JSON.parse(result)
+            }catch (err){
+                //result is the error message
+            }
+
+            if (!!result.key){      //"return value"
+
+                var selltime = new Date(result.selltime);
+                if (result.selltime===0){
+                    selltime = "未售出"
+                }
+                alert("产品信息已获取，请查看")
+                var now = new Date().getTime()
+                $("#selltime").text(selltime)
+                $("#nowtime").text(new Date(now))
+                $("#key_out").text(result.key)
+                $("#name_out").text(result.name)
+                $("#description_out").text(result.value)
+            } else {
+                alert("no key")
+            }
+
+        }
+
+    }
+$("#tip2").hide()
+    $("#sold").click(function (){
+        $("#tip2").show()
+        var to = dappAddress;
+        var value = "0";
+        var callFunction = "sell"
+        var callArgs = "[\"" + unique_id + "\"]"; //in the form of ["args"]
+        serialNumber = nebPay.call(to, value, callFunction, callArgs, {    //使用nebpay的call接口去调用合约,
+            listener: cbPush        //设置listener, 处理交易返回信息
+        });
+
+        intervalQuery = setInterval(function () {
+            funcIntervalQuery1();
+        }, 10000);
+
+    });
+
+
+    function funcIntervalQuery1() {
+        nebPay.queryPayInfo(serialNumber)   //search transaction result from server (result upload to server by app)
+            .then(function (resp) {
+                console.log("tx result: " + resp)   //resp is a JSON string
+                $("#resultall2").text(JSON.stringify(resp))
+
+                var respObject = JSON.parse(resp)
+                if(respObject.code === 0 && respObject.data.status === 1){
+                    lookfor(unique_id)
+                    clearInterval(intervalQuery)
+
+                }
+            })
+            .catch(function (err) {
+                console.log(err);
+            });
+    }
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
