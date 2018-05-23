@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+
+<body>
+
+  <div id="m2" class="mask_rank">
+    <div class="content">
+      <div class="score-container">
+	    	<p class="title">排行榜</>
+      </div>
+
+        <div class="rank-container">
+<div id="ranklist" class="score-container">
+               <span class="rankfont">排名</span> <span class="rankfont">用户</span> <span class="rankfont">分数</span><br>
+
+                <span class="rankfont">1</span><span class="rankfont">n123432j23jijhi235</span> <span class="rankfont">12</span><br>
+
+</div>
+        </div>
+
+        <button id=test class="upload">
+	  		上传分数
+	  	</button>
+    </div>
+  </div>
+
+<script src="libs/jquery-3.3.1.min.js"></script>
+<script>
+    var r1="<span class=\"rankfont\">";
+    var r2="</span><span class=\"rankfont\">";
+    var r3="</span><br>";
+
+
+
+    $("#test").click(function () {
+
+        $("#ranklist").html( $("#ranklist").html() + r1 + 1 + r2 + "kevin" + r2 + 3 + r3);
+    })
+</script>
+</body>
+</html>

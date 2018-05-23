@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jump</title>
+	<meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no">
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="stylesheet" href="css/jump.css">
+</head>
+<body>
+  <div id="m1" class="mask">
+    <div class="content">	
+      <div class="score-container">
+	    	<p class="title">本次得分</>
+	    	<p class="score">0</h1>
+	    </div>
+
+	  	<button class="restart">
+	  		重新开始(Restart)
+	  	</button>
+        <br>
+
+        <button id="submit" class="upload">
+	  		上传分数(Submit score)
+	  	</button>
+        <br>
+        <button id="rank" class="upload">
+	  		排行榜(Rank)
+	  	</button>
+
+        <a class="score-gaming2" href="https://www.github.com/kevin031060">Supported by Jesse Luo, Kevin. Contact us.</a>
+    </div>
+  </div>
+
+  <div id="m2" class="mask_rank">
+    <div class="content">
+      <div class="score-container">
+	    	<p class="title">排行榜</>
+      </div>
+
+        <div class="rank-container">
+<div id="ranklist" class="score-container" style="font-size: 5px">
+               <span class="rankfont span1">排名</span> <span class="rankfont span2">用户</span> <span class="rankfont span1">分数</span><br>
+
+
+</div>
+        </div>
+
+        <button id="close" class="upload">
+	  		Close
+	  	</button>
+    </div>
+  </div>
+
+
+  <div class="info">
+
+    <a class="author" href="#" target="_blank">
+      玩跳一跳平分百万大赛奖金，榜单前N名瓜分15-25%总奖金，首次提交成绩的用户平分5-10%总奖金（持有NAS越多奖励越多）！
+    </a>
+    <div class="score-gaming2">
+      Playing Jump game shares the NAS prize! The first N in the rank shares 15-25% of the total prize. Each user who submits the score still can share 5-10% of the total prize(The more NAS you have in the wallet, you will share more prize)!
+    </div>
+    <div class="score-gaming">	
+      得分：<span class="score-current">0</span>
+    </div>
+  </div>
+	<script src="libs/three.min.js"></script>
+    <script src="libs/jquery-3.3.1.min.js"></script>
+    <script src=libs/bootstrap-4.0.0-dist/js/bootstrap.min.js></script>
+    <script src=libs/nebPay.js></script>
+    <script src=libs/nebulas.js></script>
+
+	<script src="js/game.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
