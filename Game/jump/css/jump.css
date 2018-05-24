@@ -51,6 +51,18 @@ body{
 	border: 5px solid rgba(255,255,255,0.05);
 
 }
+.content2{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 300px;
+	height: 500px;
+	border-radius: 20px;
+	background: rgba(0,0,0,0.4);
+	border: 5px solid rgba(255,255,255,0.05);
+
+}
 .score-container{
 	color: #ffffff;
 	text-align: center;
