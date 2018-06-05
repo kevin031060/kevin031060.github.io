@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>星云书单</title>
+		<meta name="description" content="Animated Books with CSS 3D Transforms" />
+		<meta name="keywords" content="book, 3d, interactive, animated, 3d transform, css, web design" />
+		<meta name="author" content="Marco Barría for Codrops" />
+
+		<script src="book_lib/modernizr.custom.js"></script>
+
+        <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Loading CSS -->
+    <link rel="stylesheet" type="text/css" href="css/loading.css">
+    <link rel="stylesheet" type="text/css" href="css/loading-btn.css">
+
+
+
+
+
+        <link rel="stylesheet" type="text/css" href="book_lib/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="book_lib/demo.css" />
+		<link rel="stylesheet" type="text/css" href="book_lib/book.css" />
+
+
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-7243260-2']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+
+	</head>
+	<body>
+		<div class="container1">
+			<!-- Top Navigation -->
+			<div class="codrops-top clearfix">
+				<a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Tutorials/PseudoElementsImageCaptions/"><span>Previous Demo</span></a>
+				<span class="right"><a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=15806"><span>Back to the Codrops Article</span></a></span>
+			</div>
+			<header>
+				<h1>星云书单 <span>网络小说、文学书籍、技术手册等书单分享社区</span></h1>
+				<nav class="codrops-demos">
+					<a id = "bookall" class="current-demo" href="#">书单广场</a>
+					<a id = "favors" href="#">我的收藏</a>
+					<a id = "add" href="#">分享书单</a>
+				</nav>
+			</header>
+			<div class="component">
+
+				<ul id="booklist" class="align">
+					<li>
+						<figure class='book'>
+
+							<!-- Front -->
+
+							<ul class='hardcover_front'>
+								<li>
+									<div class="coverDesign yellow">
+										<span class="ribbon">NEW</span>
+										<h1>挪威的森林</h1>
+										<p>TRANSFORM</p>
+									</div>
+								</li>
+								<li><p>kevin</p></li>
+							</ul>
+
+							<!-- Pages -->
+
+							<ul class='page'>
+								<li></li>
+								<li>
+									<a class="btn" href="#">Download</a>
+								</li>
+								<li>kevin</li>
+								<li>kevin</li>
+								<li></li>
+							</ul>
+
+							<!-- Back -->
+
+							<ul class='hardcover_back'>
+								<li></li>
+								<li></li>
+							</ul>
+							<ul class='book_spine'>
+								<li></li>
+								<li></li>
+							</ul>
+							<figcaption>
+								<h1>CSS Ninja</h1>
+								<span>By Marco Barría for Codrops</span>
+								<p>Tomatillo water chestnut mustard cabbage yarrow sierra leone bologi. Watercress green bean groundnut earthnut pea dandelion radicchio.</p>
+								<img src="lib/a1.png" style="margin-left: 50px">
+							</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure class='book'>
+
+							<!-- Front -->
+
+							<ul class='hardcover_front'>
+								<li>
+									<div class="coverDesign blue">
+										<h1>JS</h1>
+										<p>FUNCTION</p>
+									</div>
+								</li>
+								<li></li>
+							</ul>
+
+							<!-- Pages -->
+
+							<ul class='page'>
+								<li></li>
+								<li>
+									<a class="btn" href="#">Download</a>
+								</li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+
+							<!-- Back -->
+
+							<ul class='hardcover_back'>
+								<li></li>
+								<li></li>
+							</ul>
+							<ul class='book_spine'>
+								<li></li>
+								<li></li>
+							</ul>
+							<figcaption>
+								<h1>Storm JS</h1>
+								<span>By Marco Barría for Codrops</span>
+								<p>Leek winter purslane sierra leone bologi caulie tomatillo soko turnip greens bunya nuts silver beet melon green bean celery. Gram kakadu plum wakame.</p>
+							</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure class='book'>
+
+						<!-- Front -->
+
+							<ul class='hardcover_front'>
+								<li>
+									<div class="coverDesign grey">
+										<span class="ribbon">Nº1</span>
+										<h1>HTML5</h1>
+										<p>CANVAS</p>
+									</div>
+								</li>
+								<li></li>
+							</ul>
+
+						<!-- Pages -->
+
+							<ul class='page'>
+								<li></li>
+								<li>
+									<a class="btn" href="#">Download</a>
+								</li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+
+						<!-- Back -->
+
+							<ul class='hardcover_back'>
+								<li></li>
+								<li></li>
+							</ul>
+							<ul class='book_spine'>
+								<li></li>
+								<li></li>
+							</ul>
+							<figcaption>
+								<h1>Zen HTML5</h1>
+								<span>By Marco Barría for Codrops</span>
+								<p>Salsify horseradish winter purslane yarrow zucchini bush tomato aubergine cauliflower broccoli. Kohlrabi azuki bean chickpea quandong dandelion seakale.</p>
+							</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure class='book'>
+
+						<!-- Front -->
+
+							<ul class='hardcover_front'>
+								<li>
+									<img src="book_lib/cover.jpg" alt="" width="100%" height="100%">
+								</li>
+								<li></li>
+							</ul>
+
+						<!-- Pages -->
+
+							<ul class='page'>
+								<li></li>
+								<li>
+									<a class="btn" href="#">Download</a>
+								</li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+
+						<!-- Back -->
+
+							<ul class='hardcover_back'>
+								<li></li>
+								<li></li>
+							</ul>
+							<ul class='book_spine'>
+								<li></li>
+								<li></li>
+							</ul>
+							<figcaption>
+								<h1>Papelucho Perdido</h1>
+								<span>By Marcela Paz</span>
+								<p>Fennel bamboo shoot pea sprouts rutabaga parsnip green bean gram wattle seed lentil horseradish nori. Grape lettuce turnip greens.</p>
+							</figcaption>
+						</figure>
+					</li>
+                    					<li>
+						<figure class='book'>
+
+						<!-- Front -->
+
+							<ul class='hardcover_front'>
+								<li>
+									<img src="book_lib/cover.jpg" alt="" width="100%" height="100%">
+								</li>
+								<li></li>
+							</ul>
+
+						<!-- Pages -->
+
+							<ul class='page'>
+								<li></li>
+								<li>
+									<a class="btn" href="#">Download</a>
+								</li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+
+						<!-- Back -->
+
+							<ul class='hardcover_back'>
+								<li></li>
+								<li></li>
+							</ul>
+							<ul class='book_spine'>
+								<li></li>
+								<li></li>
+							</ul>
+							<figcaption>
+								<h1>Papelucho Perdido</h1>
+								<span>By Marcela Paz</span>
+								<p>Fennel bamboo shoot pea sprouts rutabaga parsnip green bean gram wattle seed lentil horseradish nori. Grape lettuce turnip greens.</p>
+							</figcaption>
+						</figure>
+					</li>
+				</ul>
+				<p class="note">Please note that this only works in browsers that support CSS 3D Transforms. Also note that IE10 <strong>does not</strong> support <em>preserve-3d</em> which is needed for this demo.</p>
+			</div>
+		</div><!-- /container -->
+		<!-- For the demo ad only -->
+	    <script src="lib/jquery-3.3.1.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/nebulas.js"></script>
+    <script src="lib/nebPay.js"></script>
+    <script src="lib/dappConfig.js"></script>
+    <script src="lib/nebConfig.js"></script>
+    <script src="lib/mustache.min.js"></script>
+    <script src="lib/bignumber.min.js"></script>
+	<script src="lib/nasTool.js"></script>
+
+	<script>
+
+$("#bookall").click(function () {
+	$("#booklist").html("");
+	$("#bookall").addClass("current-demo");
+	$("#favors").removeClass("current-demo");
+	$("#add").removeClass("current-demo");
+	showBooks()
+
+});
+$("#favors").click(function () {
+
+	showFavors()
+});
+$("#add").click(function () {
+
+	$("#submit").modal("show")
+	$("#bsubmit").click(function () {
+	alert("ok")
+	var title  = $("#c_title").val();
+	var type  = $("#c_type").val();
+	var des  = $("#c_des").val();
+	var content  = $("#c_content").val();
+	alert(content,"ok")
+	save(title,type,des,content);
+});
+
+});
+
+
+
+
+ 
+function btnclick(itemview, result) {
+
+
+	     $(itemview).each(function(k,v){
+         $(v).off('click').on('click', function(){
+//             获得当前id
+			 var ind=$(this).attr("id");
+			 ind = ind.substring(4);
+			 ind = parseInt(ind);
+             console.log(ind);
+
+			 if (favorIndex.indexOf(ind)==-1){
+				 $("#like").attr('src',"lib/a1.png");
+				 $("#like2").html("收藏")
+			 }else {
+				 $("#like").attr('src',"lib/a2.png");
+				 $("#like2").html("取消收藏")
+			 }
+
+			 $("#like").click(function () {
+
+				    addFavor(ind);
+
+
+			  });
+
+			 console.log(result[ind].content)
+			 $("#m_title").html(result[ind].title);
+			 $("#m_content").html(result[ind].content);
+			 $("#content").modal("show")
+         });
+     });
+}
+
+
+
+        function pay(index, value, memo){
+
+            var fun = 'pay';
+            var args = [];
+            args.push(index);
+            args.push(memo);
+            callNebPay(fun, args, value, function (resp) {
+                function clearWait() {
+                    clearInterval(wait);
+                    window.location.href = window.location.protocol + '//' + window.location.host + window.location.pathname + "?index=" + index +"&action=view&address=" + resp.result.from;
+                }
+                var wait = setInterval(clearWait, 2000);
+
+            });
+
+    }
+
+function addFavor(index){
+        if(checkNASWallet($("#add"))){
+			$("#content").modal("hide")
+			var fun = 'addFavors';
+            var args = [];
+            args.push(index.toString());
+            callNebPay(fun, args, 0, function (resp) {
+                function clearWait() {
+
+				 	var va = $("#like")[0].src;
+					console.log(va);
+					if(va == "lib/a1.png"){
+						$("#like").attr('src',"lib/a1.png");
+					}else {
+						$("#like").attr('src',"lib/a1.png");
+					}
+
+                    clearInterval(wait);
+
+					showFavors()
+                }
+                var wait = setInterval(clearWait, 2000);
+
+            });
+		}
+}
+
+function save(title, type, des, content){
+        if(checkNASWallet($("#add"))){
+			$("#submit").modal("hide");
+			var fun = 'save';
+            var args = [];
+            args.push(title);
+			args.push(type);
+			args.push(des);
+			args.push(content);
+            callNebPay(fun, args, 0, function (resp) {
+                function clearWait() {
+
+
+                    clearInterval(wait);
+	$("#booklist").html("");
+	$("#bookall").addClass("current-demo");
+	$("#favors").removeClass("current-demo");
+	$("#add").removeClass("current-demo");
+					showBooks()
+                }
+                var wait = setInterval(clearWait, 2000);
+
+            });
+		}
+}
+
+var allBooks = [];
+showBooks();
+function showBooks() {
+
+
+	            var fun = 'getlist';
+                var args = [];
+                args.push("0");
+	            args.push("20");
+                innerCall(fun, args, 0, function(params){
+                    neb.api.call(params.from.getAddressString(), params.to, params.value, 0, params.gasPrice, params.gasLimit, params.contract).then(function (resp) {
+                        var result = resp.result;
+						$("#booklist").html("");
+                        if(result === 'null' || result === '""'){
+							$("#booklist").html("空空如也");
+                            return;
+                        }
+                        try{
+                            result = JSON.parse(result);
+
+							allBooks = result;
+
+							itemview = [];
+//							构造view的点击事件
+							for (var i=0;i<result.length;i++) {
+                        		var temp1 = "#view" + i;
+                        		itemview.push(temp1);
+							}
+							console.log(itemview);
+
+
+//                          构造html
+							for (var k=0;k<result.length;k++) {
+                        		var item = result[k];
+                        		form_html(item, k);
+							}
+							btnclick(itemview, result)
+
+                        }catch (err){
+                            //result is the error message
+                            console.log("error:" + err.message)
+                        }
+
+                    }).catch(function (err) {
+                        //cbSearch(err)
+                        console.log("error:" + err.message)
+                    });
+
+                });
+
+}
+    var address = '';
+    var addressWallet = '';
+function showFavors() {
+	$("#booklist").html("");
+	$("#favors").addClass("current-demo");
+	$("#add").removeClass("current-demo");
+	$("#bookall").removeClass("current-demo");
+
+			window.addEventListener('message', function (e) {
+            if (e.data.data && !!e.data.data.account) {
+                if(address === '') address = e.data.data.account;
+                addressWallet = e.data.data.account;
+				console.log(address)
+            }
+					    if(address !== '') {
+				var fun = 'getFavors';
+				var args = [];
+				args.push(address);
+				innerCall(fun, args, 0, function (params) {
+					neb.api.call(params.from.getAddressString(), params.to, params.value, 0, params.gasPrice, params.gasLimit, params.contract).then(function (resp) {
+						var result = resp.result;
+						$("#booklist").html("");
+						if (result === 'null' || result === '""') {
+							$("#booklist").html("还没有收藏哦，您可以去书单广场找找");
+
+							return;
+						}
+						try {
+							result = JSON.parse(result);
+							console.log(result)
+
+							if (result.length==0){
+								$("#booklist").html("还没有收藏哦，您可以去书单广场找找");
+							}
+//              构造html
+							for (var k = 0; k < result.length; k++) {
+								console.log(k)
+								var item = result[k];
+								form_html(item, k);
+							}
+
+							itemview = [];
+//				构造view的点击事件
+							for (var i=0;i<result.length;i++) {
+                        		var temp1 = "#view" + i;
+                        		itemview.push(temp1);
+							}
+							console.log(itemview);
+							btnclick(itemview, result)
+							
+
+						} catch (err) {
+							//result is the error message
+							console.log("error:" + err.message)
+							$("#booklist").html("还没有收藏哦，您可以去书单广场找找");
+						}
+
+					}).catch(function (err) {
+						//cbSearch(err)
+						console.log("error:" + err.message)
+						$("#booklist").html("还没有收藏哦，您可以去书单广场找找");
+					});
+
+				});
+			}else {
+				$("#booklist").html("还没有收藏哦，您可以去书单广场找找");
+			}
+			});
+
+	        window.postMessage({
+            "target": "contentscript",
+            "data": {},
+            "method": "getAccount",
+        }, "*");
+
+
+
+}
+var favorIndex=[];
+getFavors();
+function getFavors() {
+
+			window.addEventListener('message', function (e) {
+            if (e.data.data && !!e.data.data.account) {
+                if(address === '') address = e.data.data.account;
+                addressWallet = e.data.data.account;
+				console.log(address)
+            }
+			if(address !== '') {
+				var fun = 'getFavorsIndex';
+				var args = [];
+				args.push(address);
+				innerCall(fun, args, 0, function (params) {
+					neb.api.call(params.from.getAddressString(), params.to, params.value, 0, params.gasPrice, params.gasLimit, params.contract).then(function (resp) {
+						var result = resp.result;
+						if (result === 'null' || result === '""') {
+							return;
+						}
+						try {
+							result = JSON.parse(result);
+							favorIndex = result;
+							console.log("favorIndex:", favorIndex);
+
+
+
+						} catch (err) {
+							//result is the error message
+							console.log("error:" + err.message)
+
+						}
+
+					}).catch(function (err) {
+						//cbSearch(err)
+						console.log("error:" + err.message);
+					});
+
+				});
+			}else {
+			}
+			});
+
+	        window.postMessage({
+            "target": "contentscript",
+            "data": {},
+            "method": "getAccount",
+        }, "*");
+
+
+
+}
+
+function form_html(item, k) {
+    console.log(item.title+"___ok____"+item.type)
+    var title = item.title;
+    var type = item.type;
+	var description = item.description;
+    var r1="<li><figure class='book'><ul class='hardcover_front'><li><div class=\"coverDesign yellow\"><span class=\"ribbon\">NEW</span><h1>";
+    var r2="</h1><p>";
+    var r3="</p></div></li><li></li></ul><ul class='page'><li></li><li><a id=";
+	var vvv = "view"+k.toString();
+	var v3=" class=\"btn\" href=\"#\">查看书单</a></li><li></li><li></li><li></li></ul>";
+    var r4="<ul class='hardcover_back'><li></li><li></li></ul><ul class='book_spine'><li></li><li></li></ul><figcaption><h1>";
+	var r5="</h1><span>By Marco Barría for Codrops</span><p>";
+	var r6="</p></figcaption></figure></li>";
+	console.log(r3+vvv+v3)
+
+    $("#booklist").html( $("#booklist").html() + r1 + title + r2 + type + r3 + vvv + v3 + r4 + title + r5 + description + r6);
+
+//	<li><figure class='book'><ul class='hardcover_front'><li><div class="coverDesign yellow"><span class="ribbon">NEW</span><h1>
+//			挪威的森林
+//			</h1><p>
+//			TRANSFORM
+//</p></div></li><li></li></ul><ul class='page'><li></li><li><a class="btn" href="#">Download</a></li><li></li><li></li><li></li></ul>
+//<ul class='hardcover_back'><li></li><li></li></ul><ul class='book_spine'><li></li><li></li></ul><figcaption><h1>
+//			CSS Ninja
+//	</h1><span>By Marco Barría for Codrops</span><p>
+//Tomatillo water chestnut mustard cabbage yarrow sierra leone bologi. Watercress green bean groundnut earthnut pea dandelion radicchio.
+//	</p></figcaption></figure></li>
+
+}
+
+	</script>
+
+
+	</body>
+
+
+<div id="noWallet" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">警告</h4>
+            </div>
+            <div class="modal-body">
+                <p>检测到您未安装星云钱包插件。请使用谷歌(Chrome)浏览器并且安装<a href="https://github.com/ChengOrangeJu/WebExtensionWallet" target="_blank">星云钱包插件</a>。</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="disableCheckNASWallet()">
+                    我已安装
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div id="noWalletMobile" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">警告</h4>
+            </div>
+            <div class="modal-body">
+                <p>检测到您在移动端使用，请安装<a href="https://nano.nebulas.io" target="_blank">NAS nano</a>。</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="disableCheckNASWallet()">
+                    我已安装
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<div id="invalidAddress" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">警告</h4>
+            </div>
+            <div class="modal-body">
+                <p>星云账号地址格式错误！</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<div id="invalidSearch" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">警告</h4>
+            </div>
+            <div class="modal-body">
+                <p>请输入收款项编号或者正确的星云账号地址！</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="packing" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">通知</h4>
+            </div>
+            <div class="modal-body">
+                <p>交易正在打包，请稍等十几秒钟。</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+
+                <div class="btn btn-primary ld-ext-right running">正在打包交易...
+                    <div class="ld ld-hourglass ld-spin-fast"></div>
+                </div>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="packing_refresh" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">通知</h4>
+            </div>
+            <div class="modal-body">
+                <p>您使用的是移动客户端，请您手动刷新获取最新支付信息。</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+
+                <div class="btn btn-primary ld-ext-right running">等待用户刷新
+                    <div class="ld ld-hourglass ld-spin-fast"></div>
+                </div>
+                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="refresh()">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="packing_success" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">通知</h4>
+            </div>
+            <div class="modal-body">
+                <p>交易打包成功！</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="no_bill" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">通知</h4>
+            </div>
+            <div class="modal-body">
+                <p>不存在该收款项！</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div id="fail" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">通知</h4>
+            </div>
+            <div class="modal-body">
+                <p>交易失败，请查询<a id="fail_link">交易信息</a>！</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="query_overtime" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">通知</h4>
+            </div>
+            <div class="modal-body">
+                <p>交易查询超时，请查询<a id="query_link">交易信息</a>！</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div id="confirm" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">通知</h4>
+            </div>
+            <div class="modal-body">
+                <p>正在调用钱包，请确认！</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div id="reject" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">通知</h4>
+            </div>
+            <div class="modal-body">
+                <p>您已取消！</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="content" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 id="m_title" class="modal-title">通知</h4>
+            </div>
+            <div class="modal-body">
+                <p id="m_content">您已取消！</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+				<img id="like" src="lib/a1.png">
+				<p id="like2" class="small">收藏</p>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="submit" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">分享您的网文书单</h4>
+            </div>
+            <div class="modal-body">
+                    <div class="form-group form-horizontal">
+                        <label for="c_title">书单名称</label>
+                        <input type="text" name="txt_departmentname" class="form-control" id="c_title" placeholder="修仙合集">
+                    </div>
+                    <div class="form-group">
+                        <label for="c_type">网文类型</label>
+                         <input type="text" name="txt_parentdepartment" class="form-control" id="c_type" placeholder="修仙小说">
+                    </div>
+                    <div class="form-group">
+                        <label for="c_des">书单简述</label>
+                         <input type="text" name="txt_departmentlevel" class="form-control" id="c_des" placeholder="均为完结小说">
+                     </div>
+                    <div class="form-group">
+                        <label for="c_content">书单内容</label>
+                        <textarea id="c_content" class="form-control" rows="5" placeholder="《修仙狂徒》"></textarea>
+                    </div>
+             </div>
+
+
+            <div class="modal-footer" >
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button id="bsubmit" class="btn btn-primary" >分享</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Loading CSS -->
+    <link rel="stylesheet" type="text/css" href="css/loading.css">
+    <link rel="stylesheet" type="text/css" href="css/loading-btn.css">
+
+</head>
+<body>
+<button id="jump">jump</button>
+    <!-- script -->
+    <script src="lib/jquery-3.3.1.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/nebulas.js"></script>
+    <script src="lib/nebPay.js"></script>
+    <script src="lib/dappConfig.js"></script>
+    <script src="lib/nebConfig.js"></script>
+    <script src="lib/mustache.min.js"></script>
+    <script src="lib/bignumber.min.js"></script>
+    <script src="lib/nasTool.js"></script>
+
+
+<script>
+    var submit = $("#jump");
+    submit.click(function () {
+        submit.html("ok");
+//        window.location.href = "t1.html"
+        pay("1",0,"1");
+    });
+
+        function pay(index, value, memo){
+
+            var fun = 'pay';
+            var args = [];
+            args.push(index);
+            args.push(memo);
+            callNebPay(fun, args, value, function (resp) {
+                function clearWait() {
+                    clearInterval(wait);
+                    window.location.href = window.location.protocol + '//' + window.location.host + window.location.pathname + "?index=" + index +"&action=view&address=" + resp.result.from;
+                }
+                var wait = setInterval(clearWait, 2000);
+
+            });
+
+    }
+
+</script>
+</body>
+
+<div id="noWallet" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">警告</h4>
+            </div>
+            <div class="modal-body">
+                <p>检测到您未安装星云钱包插件。请使用谷歌(Chrome)浏览器并且安装<a href="https://github.com/ChengOrangeJu/WebExtensionWallet" target="_blank">星云钱包插件</a>。</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="disableCheckNASWallet()">
+                    我已安装
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div id="noWalletMobile" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">警告</h4>
+            </div>
+            <div class="modal-body">
+                <p>检测到您在移动端使用，请安装<a href="https://nano.nebulas.io" target="_blank">NAS nano</a>。</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="disableCheckNASWallet()">
+                    我已安装
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<div id="invalidAddress" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">警告</h4>
+            </div>
+            <div class="modal-body">
+                <p>星云账号地址格式错误！</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<div id="invalidSearch" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">警告</h4>
+            </div>
+            <div class="modal-body">
+                <p>请输入收款项编号或者正确的星云账号地址！</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="packing" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">通知</h4>
+            </div>
+            <div class="modal-body">
+                <p>交易正在打包，请稍等十几秒钟。</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+
+                <div class="btn btn-primary ld-ext-right running">正在打包交易...
+                    <div class="ld ld-hourglass ld-spin-fast"></div>
+                </div>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="packing_refresh" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">通知</h4>
+            </div>
+            <div class="modal-body">
+                <p>您使用的是移动客户端，请您手动刷新获取最新支付信息。</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+
+                <div class="btn btn-primary ld-ext-right running">等待用户刷新
+                    <div class="ld ld-hourglass ld-spin-fast"></div>
+                </div>
+                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="refresh()">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="packing_success" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">通知</h4>
+            </div>
+            <div class="modal-body">
+                <p>交易打包成功！</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="no_bill" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">通知</h4>
+            </div>
+            <div class="modal-body">
+                <p>不存在该收款项！</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div id="fail" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">通知</h4>
+            </div>
+            <div class="modal-body">
+                <p>交易失败，请查询<a id="fail_link">交易信息</a>！</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="query_overtime" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">通知</h4>
+            </div>
+            <div class="modal-body">
+                <p>交易查询超时，请查询<a id="query_link">交易信息</a>！</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div id="confirm" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">通知</h4>
+            </div>
+            <div class="modal-body">
+                <p>正在调用钱包，请确认！</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div id="reject" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">通知</h4>
+            </div>
+            <div class="modal-body">
+                <p>您已取消！</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+</html>
