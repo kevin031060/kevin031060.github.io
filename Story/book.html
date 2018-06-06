@@ -136,43 +136,6 @@ function btnclick(itemview, result) {
              ind_g = ind;
              console.log(ind);
 
-			 if (favorIndex.indexOf(ind)==-1){
-				 $("#like").attr('src',"lib/a1.png");
-                 $("#like").css("width", "40px");
-                 $("#like").css("height", "40px");
-				 $("#like2").html("点击收藏")
-			 }else {
-				 $("#like").attr('src',"lib/a2.png");
-                 $("#like").css("width", "40px");
-                 $("#like").css("height", "40px");
-				 $("#like2").html("取消收藏")
-			 }
-
-			 $("#like").off('click').on("click",function () {
-				    addFavor(ind);
-			  });
-
-             $("#pay").off('click').on("click", function () {
-//                    alert("正在向书单作者打赏Nas，默认为0.01Nas,您也可在弹出框中修改金额")
-                 var paynum=prompt("请输入您的打赏金额（NAS）","0.01");
-
-                 if(paynum==null || paynum==""){
-                     return;
-                 }else {
-                     console.log(paynum);
-                     var n = Number(paynum);
-                     if (!isNaN(n)){
-                        paynas(result[ind_g].author,n);
-                     }else {
-                        alert("请输入正确的金额") ;
-                     }
-                 }
-			  });
-
-			 console.log(result[ind].content)
-			 $("#m_title").html(result[ind].title);
-			 $("#m_content").html(result[ind].content);
-			 $("#content").modal("show")
 
             });
     }
