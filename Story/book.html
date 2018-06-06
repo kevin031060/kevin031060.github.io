@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>星云书单</title>
+		<title>网文书单</title>
 		<meta name="description" content="Animated Books with CSS 3D Transforms" />
 		<meta name="keywords" content="book, 3d, interactive, animated, 3d transform, css, web design" />
 		<meta name="author" content="Marco Barría for Codrops" />
@@ -46,11 +46,11 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 		<div class="container1">
 			<!-- Top Navigation -->
 			<div class="codrops-top clearfix">
-				<a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Tutorials/PseudoElementsImageCaptions/"><span>Previous Demo</span></a>
-				<span class="right"><a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=15806"><span>Back to the Codrops Article</span></a></span>
+				<a id="btn_contact" class="codrops-icon codrops-icon-prev" href="#"><span>联系我们</span></a>
+				<span class="right"><a id="btn_help" class="codrops-icon codrops-icon-drop" href="#"><span>使用说明</span></a></span>
 			</div>
 			<header>
-				<h1>星云书单 <span>网络小说、文学书籍、技术手册等书单分享社区</span></h1>
+				<h1>网络小说书单社区<span>那些年我们追过的修仙玄幻，分享书单、收藏书单、打赏作者</span></h1>
 				<nav class="codrops-demos">
 					<a id = "bookall" class="current-demo" href="#">书单广场</a>
 					<a id = "favors" href="#">我的收藏</a>
@@ -60,226 +60,21 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 			<div class="component">
 
 				<ul id="booklist" class="align">
-					<li>
-						<figure class='book'>
-
-							<!-- Front -->
-
-							<ul class='hardcover_front'>
-								<li>
-									<div class="coverDesign yellow">
-										<span class="ribbon">NEW</span>
-										<h1>挪威的森林</h1>
-										<p>TRANSFORM</p>
-									</div>
-								</li>
-								<li><p>kevin</p></li>
-							</ul>
-
-							<!-- Pages -->
-
-							<ul class='page'>
-								<li></li>
-								<li>
-									<a class="btn" href="#">Download</a>
-								</li>
-								<li>kevin</li>
-								<li>kevin</li>
-								<li></li>
-							</ul>
-
-							<!-- Back -->
-
-							<ul class='hardcover_back'>
-								<li></li>
-								<li></li>
-							</ul>
-							<ul class='book_spine'>
-								<li></li>
-								<li></li>
-							</ul>
-							<figcaption>
-								<h1>CSS Ninja</h1>
-								<span>By Marco Barría for Codrops</span>
-								<p>Tomatillo water chestnut mustard cabbage yarrow sierra leone bologi. Watercress green bean groundnut earthnut pea dandelion radicchio.</p>
-								<img src="lib/a1.png" style="margin-left: 50px">
-							</figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure class='book'>
-
-							<!-- Front -->
-
-							<ul class='hardcover_front'>
-								<li>
-									<div class="coverDesign blue">
-										<h1>JS</h1>
-										<p>FUNCTION</p>
-									</div>
-								</li>
-								<li></li>
-							</ul>
-
-							<!-- Pages -->
-
-							<ul class='page'>
-								<li></li>
-								<li>
-									<a class="btn" href="#">Download</a>
-								</li>
-								<li></li>
-								<li></li>
-								<li></li>
-							</ul>
-
-							<!-- Back -->
-
-							<ul class='hardcover_back'>
-								<li></li>
-								<li></li>
-							</ul>
-							<ul class='book_spine'>
-								<li></li>
-								<li></li>
-							</ul>
-							<figcaption>
-								<h1>Storm JS</h1>
-								<span>By Marco Barría for Codrops</span>
-								<p>Leek winter purslane sierra leone bologi caulie tomatillo soko turnip greens bunya nuts silver beet melon green bean celery. Gram kakadu plum wakame.</p>
-							</figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure class='book'>
-
-						<!-- Front -->
-
-							<ul class='hardcover_front'>
-								<li>
-									<div class="coverDesign grey">
-										<span class="ribbon">Nº1</span>
-										<h1>HTML5</h1>
-										<p>CANVAS</p>
-									</div>
-								</li>
-								<li></li>
-							</ul>
-
-						<!-- Pages -->
-
-							<ul class='page'>
-								<li></li>
-								<li>
-									<a class="btn" href="#">Download</a>
-								</li>
-								<li></li>
-								<li></li>
-								<li></li>
-							</ul>
-
-						<!-- Back -->
-
-							<ul class='hardcover_back'>
-								<li></li>
-								<li></li>
-							</ul>
-							<ul class='book_spine'>
-								<li></li>
-								<li></li>
-							</ul>
-							<figcaption>
-								<h1>Zen HTML5</h1>
-								<span>By Marco Barría for Codrops</span>
-								<p>Salsify horseradish winter purslane yarrow zucchini bush tomato aubergine cauliflower broccoli. Kohlrabi azuki bean chickpea quandong dandelion seakale.</p>
-							</figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure class='book'>
-
-						<!-- Front -->
-
-							<ul class='hardcover_front'>
-								<li>
-									<img src="book_lib/cover.jpg" alt="" width="100%" height="100%">
-								</li>
-								<li></li>
-							</ul>
-
-						<!-- Pages -->
-
-							<ul class='page'>
-								<li></li>
-								<li>
-									<a class="btn" href="#">Download</a>
-								</li>
-								<li></li>
-								<li></li>
-								<li></li>
-							</ul>
-
-						<!-- Back -->
-
-							<ul class='hardcover_back'>
-								<li></li>
-								<li></li>
-							</ul>
-							<ul class='book_spine'>
-								<li></li>
-								<li></li>
-							</ul>
-							<figcaption>
-								<h1>Papelucho Perdido</h1>
-								<span>By Marcela Paz</span>
-								<p>Fennel bamboo shoot pea sprouts rutabaga parsnip green bean gram wattle seed lentil horseradish nori. Grape lettuce turnip greens.</p>
-							</figcaption>
-						</figure>
-					</li>
-                    					<li>
-						<figure class='book'>
-
-						<!-- Front -->
-
-							<ul class='hardcover_front'>
-								<li>
-									<img src="book_lib/cover.jpg" alt="" width="100%" height="100%">
-								</li>
-								<li></li>
-							</ul>
-
-						<!-- Pages -->
-
-							<ul class='page'>
-								<li></li>
-								<li>
-									<a class="btn" href="#">Download</a>
-								</li>
-								<li></li>
-								<li></li>
-								<li></li>
-							</ul>
-
-						<!-- Back -->
-
-							<ul class='hardcover_back'>
-								<li></li>
-								<li></li>
-							</ul>
-							<ul class='book_spine'>
-								<li></li>
-								<li></li>
-							</ul>
-							<figcaption>
-								<h1>Papelucho Perdido</h1>
-								<span>By Marcela Paz</span>
-								<p>Fennel bamboo shoot pea sprouts rutabaga parsnip green bean gram wattle seed lentil horseradish nori. Grape lettuce turnip greens.</p>
-							</figcaption>
-						</figure>
-					</li>
+					<p>正在加载...</p>
 				</ul>
-				<p class="note">Please note that this only works in browsers that support CSS 3D Transforms. Also note that IE10 <strong>does not</strong> support <em>preserve-3d</em> which is needed for this demo.</p>
 			</div>
+
+                <footer class="my-5 pt-5 text-muted text-center text-small note">
+        <p class="mb-1">&copy; 2018 网络小说书单分享社区</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://nebulas.io" target="_blank" style="color: #6c757d">星云官方网站</a></li>
+            <li class="list-inline-item"><a href="https://explorer.nebulas.io" target="_blank" style="color: #6c757d">星云区块浏览器</a></li>
+            <li class="list-inline-item"><a href="https://github.com/ChengOrangeJu/WebExtensionWallet" target="_blank" style="color: #6c757d">星云钱包插件</a>
+            </li>
+            <li class="list-inline-item"><a href="https://github.com/kevin031060/kevin031060.github.io" target="_blank" style="color: #6c757d">项目GitHub源码</a></li>
+        </ul>
+    </footer>
+
 		</div><!-- /container -->
 		<!-- For the demo ad only -->
 	    <script src="lib/jquery-3.3.1.min.js"></script>
@@ -310,22 +105,79 @@ $("#add").click(function () {
 
 	$("#submit").modal("show")
 	$("#bsubmit").click(function () {
-	alert("ok")
 	var title  = $("#c_title").val();
 	var type  = $("#c_type").val();
 	var des  = $("#c_des").val();
 	var content  = $("#c_content").val();
-	alert(content,"ok")
 	save(title,type,des,content);
 });
 
 });
+$("#btn_contact").click(function () {
+    $("#contact").modal("show");
+});
+$("#btn_help").click(function () {
+    $("#help").modal("show");
+});
 
 
-
-
- 
+ var ind_g;
 function btnclick(itemview, result) {
+
+    console.log(window.mobileAndTabletcheck())
+
+    if (window.mobileAndTabletcheck()){
+
+           $(".book").click(function(){
+	            //             获得当前id
+			 var ind=$(this).attr("id");
+			 ind = ind.substring(4);
+			 ind = parseInt(ind);
+             ind_g = ind;
+             console.log(ind);
+
+			 if (favorIndex.indexOf(ind)==-1){
+				 $("#like").attr('src',"lib/a1.png");
+                 $("#like").css("width", "40px");
+                 $("#like").css("height", "40px");
+				 $("#like2").html("点击收藏")
+			 }else {
+				 $("#like").attr('src',"lib/a2.png");
+                 $("#like").css("width", "40px");
+                 $("#like").css("height", "40px");
+				 $("#like2").html("取消收藏")
+			 }
+
+			 $("#like").off('click').on("click",function () {
+				    addFavor(ind);
+			  });
+
+             $("#pay").off('click').on("click", function () {
+//                    alert("正在向书单作者打赏Nas，默认为0.01Nas,您也可在弹出框中修改金额")
+                 var paynum=prompt("请输入您的打赏金额（NAS）","0.01");
+
+                 if(paynum==null || paynum==""){
+                     return;
+                 }else {
+                     console.log(paynum);
+                     var n = Number(paynum);
+                     if (!isNaN(n)){
+                        paynas(result[ind_g].author,n);
+                     }else {
+                        alert("请输入正确的金额") ;
+                     }
+                 }
+			  });
+
+			 console.log(result[ind].content)
+			 $("#m_title").html(result[ind].title);
+			 $("#m_content").html(result[ind].content);
+			 $("#content").modal("show")
+
+            });
+    }
+
+
 
 
 	     $(itemview).each(function(k,v){
@@ -334,21 +186,40 @@ function btnclick(itemview, result) {
 			 var ind=$(this).attr("id");
 			 ind = ind.substring(4);
 			 ind = parseInt(ind);
+             ind_g = ind;
              console.log(ind);
 
 			 if (favorIndex.indexOf(ind)==-1){
 				 $("#like").attr('src',"lib/a1.png");
-				 $("#like2").html("收藏")
+                 $("#like").css("width", "40px");
+                 $("#like").css("height", "40px");
+				 $("#like2").html("点击收藏")
 			 }else {
 				 $("#like").attr('src',"lib/a2.png");
+                 $("#like").css("width", "40px");
+                 $("#like").css("height", "40px");
 				 $("#like2").html("取消收藏")
 			 }
 
-			 $("#like").click(function () {
-
+			 $("#like").off('click').on("click",function () {
 				    addFavor(ind);
+			  });
 
+             $("#pay").off('click').on("click", function () {
+//                    alert("正在向书单作者打赏Nas，默认为0.01Nas,您也可在弹出框中修改金额")
+                 var paynum=prompt("请输入您的打赏金额（NAS）","0.01");
 
+                 if(paynum==null || paynum==""){
+                     return;
+                 }else {
+                     console.log(paynum);
+                     var n = Number(paynum);
+                     if (!isNaN(n)){
+                        paynas(result[ind_g].author,n);
+                     }else {
+                        alert("请输入正确的金额") ;
+                     }
+                 }
 			  });
 
 			 console.log(result[ind].content)
@@ -356,30 +227,37 @@ function btnclick(itemview, result) {
 			 $("#m_content").html(result[ind].content);
 			 $("#content").modal("show")
          });
+
      });
+
+
+
 }
 
+        function paynas(author, value){
+          if(checkNASWallet($("#pay"))) {
+            serialNumber = nebPay.pay(author, value, {
+                listener: function (resp) {
+                    $('#confirm').modal('hide');
+                    if (resp !== 'Error: Transaction rejected by user') {
+                        $('#packing').modal('show');
+                        var hash = resp.txhash;
+                        recheckTransactionReceipt(hash, function (resp) {
+                            $('#packing').modal('hide');
+                            $('#packing_success').modal('show');
+                            callback(resp);
+                        })
+                    } else {
+                        $('#reject').modal('show');
+                    }
 
-
-        function pay(index, value, memo){
-
-            var fun = 'pay';
-            var args = [];
-            args.push(index);
-            args.push(memo);
-            callNebPay(fun, args, value, function (resp) {
-                function clearWait() {
-                    clearInterval(wait);
-                    window.location.href = window.location.protocol + '//' + window.location.host + window.location.pathname + "?index=" + index +"&action=view&address=" + resp.result.from;
                 }
-                var wait = setInterval(clearWait, 2000);
-
             });
-
+          }
     }
 
 function addFavor(index){
-        if(checkNASWallet($("#add"))){
+        if(checkNASWallet($("#like"))){
 			$("#content").modal("hide")
 			var fun = 'addFavors';
             var args = [];
@@ -391,8 +269,12 @@ function addFavor(index){
 					console.log(va);
 					if(va == "lib/a1.png"){
 						$("#like").attr('src',"lib/a1.png");
+                        $("#like").css("width", "40px");
+                        $("#like").css("height", "40px");
 					}else {
 						$("#like").attr('src',"lib/a1.png");
+                        $("#like").css("width", "40px");
+                        $("#like").css("height", "40px");
 					}
 
                     clearInterval(wait);
@@ -435,6 +317,7 @@ var allBooks = [];
 showBooks();
 function showBooks() {
 
+	$("#booklist").html("正在加载...");
 
 	            var fun = 'getlist';
                 var args = [];
@@ -485,7 +368,7 @@ function showBooks() {
     var address = '';
     var addressWallet = '';
 function showFavors() {
-	$("#booklist").html("");
+	$("#booklist").html("正在加载...");
 	$("#favors").addClass("current-demo");
 	$("#add").removeClass("current-demo");
 	$("#bookall").removeClass("current-demo");
@@ -496,7 +379,15 @@ function showFavors() {
                 addressWallet = e.data.data.account;
 				console.log(address)
             }
-					    if(address !== '') {
+			});
+
+	        window.postMessage({
+            "target": "contentscript",
+            "data": {},
+            "method": "getAccount",
+        }, "*");
+
+         if(address !== '') {
 				var fun = 'getFavors';
 				var args = [];
 				args.push(address);
@@ -531,7 +422,7 @@ function showFavors() {
 							}
 							console.log(itemview);
 							btnclick(itemview, result)
-							
+
 
 						} catch (err) {
 							//result is the error message
@@ -549,13 +440,6 @@ function showFavors() {
 			}else {
 				$("#booklist").html("还没有收藏哦，您可以去书单广场找找");
 			}
-			});
-
-	        window.postMessage({
-            "target": "contentscript",
-            "data": {},
-            "method": "getAccount",
-        }, "*");
 
 
 
@@ -617,14 +501,16 @@ function form_html(item, k) {
     console.log(item.title+"___ok____"+item.type)
     var title = item.title;
     var type = item.type;
+    var username = item.author;
 	var description = item.description;
-    var r1="<li><figure class='book'><ul class='hardcover_front'><li><div class=\"coverDesign yellow\"><span class=\"ribbon\">NEW</span><h1>";
+    var colors = ["yellow","blue","grey"];
+    var r1="<li><figure id=" + "figu" +k.toString() + " class='book'><ul class='hardcover_front'><li><div class=\"coverDesign " + colors[k%3] +"\"><span class=\"ribbon\">NEW</span><h1>";
     var r2="</h1><p>";
     var r3="</p></div></li><li></li></ul><ul class='page'><li></li><li><a id=";
 	var vvv = "view"+k.toString();
-	var v3=" class=\"btn\" href=\"#\">查看书单</a></li><li></li><li></li><li></li></ul>";
+	var v3=" class=\"btn_b\" href=\"#\">查看书单</a></li><li></li><li></li><li></li></ul>";
     var r4="<ul class='hardcover_back'><li></li><li></li></ul><ul class='book_spine'><li></li><li></li></ul><figcaption><h1>";
-	var r5="</h1><span>By Marco Barría for Codrops</span><p>";
+	var r5="</h1><span>分享者: "+ username.substring(0,15)+"..." + "</span><p>";
 	var r6="</p></figcaption></figure></li>";
 	console.log(r3+vvv+v3)
 
@@ -886,9 +772,12 @@ function form_html(item, k) {
             </div>
             <div class="modal-footer" style="padding-top: 10px">
                 <br>
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-				<img id="like" src="lib/a1.png">
+                <img id="like" src="lib/a1.png">
 				<p id="like2" class="small">收藏</p>
+                <br>
+                <button id="pay" type="button" class="btn_c" style="border-color: red" data-dismiss="modal">打赏作者</button>
+                <button type="button" class="btn_c btn-default" data-dismiss="modal">关闭</button>
+
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -921,11 +810,64 @@ function form_html(item, k) {
 
 
             <div class="modal-footer" >
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button id="bsubmit" class="btn btn-primary" >分享</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭</button>
+                <button id="bsubmit" class="btn btn-primary" ><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>分享</button>
+
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div>
 
+<div id="contact" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">联系我们</h4>
+            </div>
+            <div class="modal-body">
+                <p>邮箱：1176414603@qq.com</p>
+                <br>
+                <p>github：https://github.com/kevin031060</p>
+                <br>
+                <p>有任何疑问或者Bug烦请联系我们</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="help" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">使用帮助</h4>
+            </div>
+            <div class="modal-body">
+                <p>我们的书单分享社区是基于星云链的，利用区块链特性进行创作激励，您的书单和收藏将会保存在星云链上</p>
+                <br>
+                <p>首先需要安装星云插件，
+                请使用谷歌(Chrome)浏览器并且安装<a href="https://github.com/ChengOrangeJu/WebExtensionWallet" target="_blank" style="color: #00CCFF">星云钱包插件</a>。</p>
+                <br>
+                <p>您在移动端使用，请安装<a href="https://nano.nebulas.io" target="_blank" style="color: #00CCFF">NAS nano</a>。</p>
+                <br>
+                <p>点击"书单广场"可以看到大家分享的书单，鼠标放在书上可以看到炫彩的书籍效果，并查看书单</p>
+                <br>
+                <p>查看书单后可点击爱心收藏您喜欢的书单，再次点击可以取消收藏</p>
+                <br>
+                <p>收藏的书单可以在"书单收藏"里查看</p>
+                <br>
+                <p>点击"分享书单"可以分享您的书单，并在书单广场里展示</p>
+                <br>
+                <p>收藏和分享时会弹出钱包插件，请放心，只会使用非常非常少的手续费</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 </html>
