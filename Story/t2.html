@@ -30,26 +30,38 @@
     var submit = $("#jump");
     submit.click(function () {
         submit.html("ok");
-//        window.location.href = "t1.html"
-        pay("1",0,"1");
+        addFavors(0);
     });
 
-        function pay(index, value, memo){
+var dappAddress = "n1yjw8R7iG1w5Vbe6MqghMZHQ1HLU4UNBs2";
+function addFavors(index) {
+        var to = dappAddress;
+        var value = "0";
+        var callFunction = "addFavors"
+        var args = [];
+        args.push(index.toString());
+        args = JSON.stringify(args);
 
-            var fun = 'pay';
-            var args = [];
-            args.push(index);
-            args.push(memo);
-            callNebPay(fun, args, value, function (resp) {
-                function clearWait() {
-                    clearInterval(wait);
-                    window.location.href = window.location.protocol + '//' + window.location.host + window.location.pathname + "?index=" + index +"&action=view&address=" + resp.result.from;
+        serialNumber = nebPay.call(to, value, callFunction, args, {    //使用nebpay的call接口去调用合约,
+            listener: function (resp) {
                 }
-                var wait = setInterval(clearWait, 2000);
+        });
+}
 
-            });
+var dappAddress = "n1yjw8R7iG1w5Vbe6MqghMZHQ1HLU4UNBs2";
+function addFavors(index) {
+        var to = dappAddress;
+        var value = "0";
+        var callFunction = "addFavors"
+        var args = [];
+        args.push(index.toString());
+        args = JSON.stringify(args);
 
-    }
+        serialNumber = nebPay.call(to, value, callFunction, args, {    //使用nebpay的call接口去调用合约,
+            listener: function (resp) {
+                }
+        });
+}
 
 </script>
 </body>

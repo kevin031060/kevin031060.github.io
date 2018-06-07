@@ -492,8 +492,12 @@ $("#submit_wed").click(function () {
 	var brid = $("#brid_s").val();
 	var groom = $("#groom_s").val();
 
+	var time_s = time.substring(0,4)+time.substring(5,7)+time.substring(8,10);
 
-	save(time, boy, girl, boy_des, girl_des, ceremony, c_re, hotel, h_re, brid, groom);
+
+
+
+	save(time_s, boy, girl, boy_des, girl_des, ceremony, c_re, hotel, h_re, brid, groom);
 
 });
 
