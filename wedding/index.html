@@ -460,9 +460,14 @@ var url = window.location.href;
 var addre = "n1HCy6DgqcQSVSRPm3hitZvjoGHu3bkQdU7";
 var domain = window.location.host;
 var idd = url.indexOf("?");
-var pure_url = url.substring(0,idd+1);
-var pure_url_no = url.substring(0,idd);
-console.log(pure_url);
+var pure_url_no="";
+if (idd==-1){
+	pure_url_no = url;
+}else {
+    pure_url_no = url.substring(0,idd);
+}
+
+console.log(pure_url_no);
 $("#success_link").attr("href", pure_url_no + "?address=" + addre);
 $("#success_link").html(pure_url_no + "?address=" + addre);
 
