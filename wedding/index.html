@@ -304,9 +304,14 @@
 					<p id="success_tip" > If you submit your info, we will generate a beautiful Invitation Page and an invitation link for you. For example: </p>
 					<a id="success_link" href="https://kevin031060.github.io/wedding/?address=n1HCy6DgqcQSVSRPm3hitZvjoGHu3bkQdU7">https://kevin031060.github.io/wedding/?address=n1HCy6DgqcQSVSRPm3hitZvjoGHu3bkQdU7</a>
 					<p>Click it and you can view your Wedding Invitation Page </p>
+					<div class="form-group">
+									<div>
+									<input id="submit_2" type="button" class="btn btn-danger" value="Make your wedding invitation card">
+									</div>
+					</div>
 				</div>
 
-				<div id="form_div" class="row">
+				<div id="form_div" class="row" hidden="hidden">
 					<div class="col-md-3 col-sm-3">
 						<div class="heart">
 							<i class="icon-heart"></i>
@@ -477,6 +482,9 @@ if(url.indexOf("address")!=-1){
 $("#make").click(function () {
 	$("#submit_div").show()
 });
+$("#submit_2").click(function () {
+	$("#form_div").show()
+})
 
 $("#submit_wed").click(function () {
 
