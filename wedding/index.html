@@ -463,8 +463,8 @@ var idd = url.indexOf("?");
 var pure_url = url.substring(0,idd+1);
 var pure_url_no = url.substring(0,idd);
 console.log(pure_url);
-$("#success_link").attr("href",pure_url+addre);
-$("#success_link").html(pure_url+addre);
+$("#success_link").attr("href", pure_url_no + "?address=" + addre);
+$("#success_link").html(pure_url_no + "?address=" + addre);
 
 if(url.indexOf("address")!=-1){
 	var add_ind = url.indexOf("address");
@@ -718,7 +718,7 @@ function save(time, boy, girl, boy_des, girl_des, ceremony, c_re, hotel, h_re, b
 
 					$("#form_div").hide();
 					$("#success_tip").html("This is your invitation link. Click and you can view your customized Wedding Invitation. You can copy it and send to your friends. ");
-					var link = pure_url + wallet_address;
+					var link = pure_url_no + "?address=" + wallet_address;
 					$("#success_link").html(link);
 					$("#success_link").attr("href",link);
                     clearInterval(wait);
