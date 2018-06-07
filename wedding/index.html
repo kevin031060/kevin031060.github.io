@@ -416,6 +416,8 @@
 							<div class="copy">
 								<p class="mb-1">&copy; 2018 Wedding Invitation</p>
         <ul class="list-inline">
+			<li class="list-inline-item"><a id="btn_help" style="color: #6c757d">How to use</a></li>
+			<li class="list-inline-item"><a id="btn_contact" style="color: #6c757d">Contact</a></li>
             <li class="list-inline-item"><a href="https://nebulas.io" target="_blank" style="color: #6c757d">Nebulas Website</a></li>
             <li class="list-inline-item"><a href="https://explorer.nebulas.io" target="_blank" style="color: #6c757d">Nebulas Explorer</a></li>
             <li class="list-inline-item"><a href="https://github.com/ChengOrangeJu/WebExtensionWallet" target="_blank" style="color: #6c757d">Nebulas Wallet Plugin</a>
@@ -481,10 +483,18 @@ if(url.indexOf("address")!=-1){
 
 $("#make").click(function () {
 	$("#submit_div").show()
+
 });
 $("#submit_2").click(function () {
 	$("#form_div").show()
-})
+});
+$("#btn_help").click(function () {
+	$("#help").modal("show")
+});
+$("#btn_contact").click(function () {
+	$("#contact").modal("show")
+});
+
 
 $("#submit_wed").click(function () {
 
@@ -752,16 +762,16 @@ function save(time, boy, girl, boy_des, girl_des, ceremony, c_re, hotel, h_re, b
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">警告</h4>
+                <h4 class="modal-title">Warn</h4>
             </div>
             <div class="modal-body">
-                <p>检测到您未安装星云钱包插件。请使用谷歌(Chrome)浏览器并且安装<a href="https://github.com/ChengOrangeJu/WebExtensionWallet" target="_blank">星云钱包插件</a>。</p>
+                <p>You have not installed the Nebulas plugin. Please use Chrome and install<a href="https://github.com/ChengOrangeJu/WebExtensionWallet" target="_blank">Nebulas wallet plugin</a>。</p>
             </div>
             <div class="modal-footer" style="padding-top: 10px">
                 <br>
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="disableCheckNASWallet()">
-                    我已安装
+                    I have installed
                 </button>
             </div>
         </div><!-- /.modal-content -->
@@ -773,16 +783,16 @@ function save(time, boy, girl, boy_des, girl_des, ceremony, c_re, hotel, h_re, b
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">警告</h4>
+                <h4 class="modal-title">Warn</h4>
             </div>
             <div class="modal-body">
-                <p>检测到您在移动端使用，请安装<a href="https://nano.nebulas.io" target="_blank">NAS nano</a>。</p>
+                <p>Detect that you are using mobile device. Please install<a href="https://nano.nebulas.io" target="_blank">NAS nano</a>。</p>
             </div>
             <div class="modal-footer" style="padding-top: 10px">
                 <br>
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="disableCheckNASWallet()">
-                    我已安装
+                    I have installed
                 </button>
             </div>
         </div><!-- /.modal-content -->
@@ -795,14 +805,14 @@ function save(time, boy, girl, boy_des, girl_des, ceremony, c_re, hotel, h_re, b
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">警告</h4>
+                <h4 class="modal-title">Warn</h4>
             </div>
             <div class="modal-body">
-                <p>星云账号地址格式错误！</p>
+                <p>Wrong address！</p>
             </div>
             <div class="modal-footer" style="padding-top: 10px">
                 <br>
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -814,10 +824,10 @@ function save(time, boy, girl, boy_des, girl_des, ceremony, c_re, hotel, h_re, b
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">警告</h4>
+                <h4 class="modal-title">Warn</h4>
             </div>
             <div class="modal-body">
-                <p>请输入收款项编号或者正确的星云账号地址！</p>
+                <p>Please input right Nebulas account！</p>
             </div>
             <div class="modal-footer" style="padding-top: 10px">
                 <br>
@@ -831,18 +841,18 @@ function save(time, boy, girl, boy_des, girl_des, ceremony, c_re, hotel, h_re, b
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">通知</h4>
+                <h4 class="modal-title">Note</h4>
             </div>
             <div class="modal-body">
-                <p>交易正在打包，请稍等十几秒钟。</p>
+                <p>Transcation is packing. Please wait for a moment</p>
             </div>
             <div class="modal-footer" style="padding-top: 10px">
                 <br>
 
-                <div class="btn btn-primary ld-ext-right running">正在打包交易...
+                <div class="btn btn-primary ld-ext-right running">Packing the transcation...
                     <div class="ld ld-hourglass ld-spin-fast"></div>
                 </div>
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -852,18 +862,18 @@ function save(time, boy, girl, boy_des, girl_des, ceremony, c_re, hotel, h_re, b
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">通知</h4>
+                <h4 class="modal-title">Note</h4>
             </div>
             <div class="modal-body">
-                <p>您使用的是移动客户端，请您手动刷新获取最新支付信息。</p>
+                <p>You are using mobile devices. Please refresh on your own.</p>
             </div>
             <div class="modal-footer" style="padding-top: 10px">
                 <br>
 
-                <div class="btn btn-primary ld-ext-right running">等待用户刷新
+                <div class="btn btn-primary ld-ext-right running">Waiting for refreshing...
                     <div class="ld ld-hourglass ld-spin-fast"></div>
                 </div>
-                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="refresh()">关闭</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="refresh()">Close</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -873,14 +883,14 @@ function save(time, boy, girl, boy_des, girl_des, ceremony, c_re, hotel, h_re, b
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">通知</h4>
+                <h4 class="modal-title">Note</h4>
             </div>
             <div class="modal-body">
-                <p>交易打包成功！</p>
+                <p>Success packing！</p>
             </div>
             <div class="modal-footer" style="padding-top: 10px">
                 <br>
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -890,14 +900,14 @@ function save(time, boy, girl, boy_des, girl_des, ceremony, c_re, hotel, h_re, b
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">通知</h4>
+                <h4 class="modal-title">Note</h4>
             </div>
             <div class="modal-body">
-                <p>不存在该收款项！</p>
+                <p>No such item！</p>
             </div>
             <div class="modal-footer" style="padding-top: 10px">
                 <br>
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -908,14 +918,14 @@ function save(time, boy, girl, boy_des, girl_des, ceremony, c_re, hotel, h_re, b
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">通知</h4>
+                <h4 class="modal-title">Note</h4>
             </div>
             <div class="modal-body">
-                <p>交易失败，请查询<a id="fail_link">交易信息</a>！</p>
+                <p>Transcation failed，please query <a id="fail_link">transcation information</a>！</p>
             </div>
             <div class="modal-footer" style="padding-top: 10px">
                 <br>
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -925,14 +935,14 @@ function save(time, boy, girl, boy_des, girl_des, ceremony, c_re, hotel, h_re, b
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">通知</h4>
+                <h4 class="modal-title">Note</h4>
             </div>
             <div class="modal-body">
-                <p>交易查询超时，请查询<a id="query_link">交易信息</a>！</p>
+                <p>Transcation query timeout，Please query<a id="query_link">transcation information</a>！</p>
             </div>
             <div class="modal-footer" style="padding-top: 10px">
                 <br>
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -943,14 +953,14 @@ function save(time, boy, girl, boy_des, girl_des, ceremony, c_re, hotel, h_re, b
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">通知</h4>
+                <h4 class="modal-title">Note</h4>
             </div>
             <div class="modal-body">
-                <p>正在调用钱包，请确认！</p>
+                <p>Opening the wallet，Please confirm！</p>
             </div>
             <div class="modal-footer" style="padding-top: 10px">
                 <br>
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -961,16 +971,67 @@ function save(time, boy, girl, boy_des, girl_des, ceremony, c_re, hotel, h_re, b
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">通知</h4>
+                <h4 class="modal-title">Note</h4>
             </div>
             <div class="modal-body">
-                <p>您已取消！</p>
+                <p>You have cancelled！</p>
             </div>
             <div class="modal-footer" style="padding-top: 10px">
                 <br>
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+<div id="help" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">How to use</h4>
+            </div>
+            <div class="modal-body">
+                <p>The Wedding Invitation Dapp is run on the Nebulas Blockchain.</p>
+                <br>
+                <p>First, you need to install the Nebulas wallet plugin.
+                Please use Chrome and install<a href="https://github.com/ChengOrangeJu/WebExtensionWallet" target="_blank" style="color: #00CCFF">Nebulas wallet plugin</a>.</p>
+                <br>
+                <p>If you are using mobile devices, please install<a href="https://nano.nebulas.io" target="_blank" style="color: #00CCFF">NAS nano</a>.</p>
+                <br>
+                <p>If you receive the Wedding invitation from your friends. You can choose to click the "Attend" to attend the wedding. Sure, you can cancel afterwards.</p>
+                <br>
+                <p>Using this Dapp, you can generate your own Wedding Invitation WebPage, which is good-looking and memorable.
+					And your wedding information will be saved on Nebulas blockchain.
+					You can send your invitation link to your friends to invite them to your wedding. </p>
+                <br>
+                <p>Click the invitation link, you can view your awesome Wedding Invitation Card.</p>
+                <br>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="contact" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Contact</h4>
+            </div>
+            <div class="modal-body">
+                <p>Email：jerryknight031060@gmail.com</p>
+                <br>
+                <p>Any Bug Please contact us</p>
+            </div>
+            <div class="modal-footer" style="padding-top: 10px">
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 </html>
